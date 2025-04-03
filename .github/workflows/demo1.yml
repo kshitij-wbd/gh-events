@@ -4,6 +4,13 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    # only runs if a push is made to the main branch
+        branches:
+            - main
+        paths:
+          # this workflow will be triggered only if there is a change in this folder
+          - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
