@@ -1,0 +1,11 @@
+name: push workflow
+on:
+    push:
+        branches:
+            - main
+jobs:
+    on_push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: upon push
+              run: echo "Code is pushed"
